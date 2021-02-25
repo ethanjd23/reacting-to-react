@@ -3,7 +3,7 @@
 const Weather = (props) => {
 
     return (
-        <h1>It's {props.sun} today and {props.degrees} degrees.</h1>
+        <h1 class="display-4">It's {props.sun} today and {props.degrees} degrees.</h1>
 )
 }
 

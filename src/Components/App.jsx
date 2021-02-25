@@ -45,28 +45,30 @@ class App extends Component {
     if (this.state.hasLoaded === false) {
       return (
         <>
-          <h1>Loading...</h1>
-          <button type="button" onClick={() => this.hasLoaded()}> 
+          <h1 class="display-5">Loading...</h1>
+          <button class="btn btn-success mt-3" type="button" onClick={() => this.hasLoaded()}> 
             Load
           </button> 
         </>
       );
     } else {
       return (
-        <>
+        <div class="jumbotron">
           <Weather sun="sunny" degrees="61" />
-          <p>{this.props.opinion}</p>
-          <p>You're in {this.state.city}.</p>
+          <p class="lead">{this.props.opinion}</p>
+          <hr class="my-4"></hr>
+          <p class="display-5">You're in {this.state.city}.</p>
           <input
+            class="form-control col-4"
             value={this.state.city}
             type="text"
             placeholder={this.state.city}
             onChange={(e) => this.setState({ city: e.target.value })}
           ></input>
-          <button type="button" onClick={() => this.hasLoaded()}>
+          <button class="btn btn-success mt-3" type="button" onClick={() => this.hasLoaded()}>
             Load
           </button>
-        </>
+        </div>
       );
     }
   }
