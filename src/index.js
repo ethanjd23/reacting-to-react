@@ -3,4 +3,4 @@ import App from "./Components/App";
 
 
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App opinion="it's great!" />, document.getElementById("root"));
